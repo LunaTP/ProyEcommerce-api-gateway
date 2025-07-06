@@ -21,7 +21,10 @@ spring:
               uri: lb://product-service
               predicates:
                 - Path=/api/productos/**
-
+            - id: sales-service
+              uri: lb://sales-service
+              predicates:
+                - Path=/api/ventas/**
   main:
     web-application-type: reactive
 eureka:
